@@ -38,7 +38,7 @@ jobs:
         run: gsutil -m rsync -R ./build gs://"$BUCKET"
         
       - name: Allow public access
-        run: gsutil -m acl ch -R -u AllUsers:R gs//"$BUCKET"
+        run: gsutil -m acl ch -R -u AllUsers:R gs://"$BUCKET"
         
       # Set cache meta for static files
       - name: Set Cache-control
